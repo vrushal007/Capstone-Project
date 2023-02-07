@@ -12,7 +12,7 @@ function App() {
           <Home />
         </Fragment>
         }
-        />
+      />
       </Routes>
     </div>
       

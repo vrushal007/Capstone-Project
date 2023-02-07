@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, IconButton, Menu, MenuItem } from '@material-ui/core';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,8 +10,15 @@ const ITEM_HEIGHT = 48;
 
 const Header = () => {
     const [anchorEl, setAnchorEl] = useState(null);
-
+    const [isHomeSection, setIsHomeSection] = useState(false);
+    const {pathname} = useLocation()
     const open = Boolean(anchorEl);
+
+    useEffect(()=>{
+        if(pathname==='/'){
+            setIsHomeSection(true)
+        }
+    },[pathname])
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -94,16 +101,13 @@ const Header = () => {
                     </Menu>
                 </section>
             </nav>
-            <section className='headerBody'>
+            {isHomeSection && <section className='headerBody'>
                 <section>
                     <h1>THE BEST FITNESS <br /> STUDIO IN TOWN</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates excepturi ratione harum placeat sint, adipisci eaque tenetur fuga asperiores ea esse dicta, non sed ex quae quisquam laborum voluptatum, veritatis accusamus. Illo omnis harum corrupti?</p>
                     <Link style={{textDecoration: 'none'}} to='/pricing'><Button>JOIN US</Button></Link>
                 </section>
-                <section>
-                    <FontAwesomeIcon icon={faYoutube} />
-                </section>
-            </section>
+            </section>}
         </header >
     );
 };

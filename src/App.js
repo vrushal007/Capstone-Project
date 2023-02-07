@@ -1,14 +1,18 @@
-import React from 'react'
-import { Route, Router, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar/Navbar'
-import Home from './pages/Home'
+import React, { Fragment } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Header from './components/Header/Header'
+import Home from './components/Home/Home'
 function App() {
   return (
     <div>
-      <Navbar />
       <Routes>
-
-        <Route path='/' element={<Home />}/>
+      <Route path='/' element={
+        <Fragment>
+          <Header />
+          <Home />
+        </Fragment>
+        }
+        />
       </Routes>
     </div>
       

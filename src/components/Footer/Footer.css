@@ -11,7 +11,10 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+<<<<<<< HEAD
     /* margin-bottom: 100px; */
+=======
+>>>>>>> 5467c3266305b947d45b8eabe72374bd3630641a
 }
 
 .footer>section:first-child>* {

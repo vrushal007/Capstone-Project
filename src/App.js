@@ -30,13 +30,6 @@ function App() {
         </Fragment>
         }
       />
-       {/* <Route path='/footer' element={
-        <Fragment>
-          <Header />
-          <Footer/>
-        </Fragment>
-        }
-      /> */}
       </Routes>
       <Footer/>
     </div>

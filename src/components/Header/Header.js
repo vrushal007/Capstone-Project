@@ -34,7 +34,7 @@ const Header = () => {
                     <p><Link to='/pricing'>Pricing</Link></p>
                     <p><Link to='/contactUs'>Contact us</Link></p>
                 </section>
-                <section>
+                <section>               
                     <IconButton
                         aria-label="more"
                         aria-controls="long-menu"

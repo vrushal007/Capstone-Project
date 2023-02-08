@@ -2,7 +2,8 @@
     "name": "capstone-project",
     "version": "0.1.0",
     "private": true,
-    "homepage": "",
+    
+    "homepage": "https://vrushal007.github.io/Capstone-Project",
     "dependencies": {
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",

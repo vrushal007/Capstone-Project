@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
+import OurClasses from './components/OurClasses/OurClasses'
 import Pricing from './components/Pricing/Pricing'
 function App() {
   return (
@@ -13,14 +14,21 @@ function App() {
           <Home />
         </Fragment>
         }
-        />
-         <Route path='/pricing' element={
+      />
+      <Route path='/pricing' element={
         <Fragment>
           <Header />
           <Pricing/>
         </Fragment>
         }
-        />
+      />
+      <Route path='/ourClasses' element={
+        <Fragment>
+          <Header />
+          <OurClasses/>
+        </Fragment>
+        }
+      />
       </Routes>
     </div>
       

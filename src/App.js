@@ -5,6 +5,7 @@ import Home from './components/Home/Home'
 import OurClasses from './components/OurClasses/OurClasses'
 import Pricing from './components/Pricing/Pricing'
 import Footer from './components/Footer/Footer'
+import ContactUs from './components/ContactUs/ContactUs'
 function App() {
   return (
     <div>
@@ -27,6 +28,13 @@ function App() {
         <Fragment>
           <Header />
           <OurClasses/>
+        </Fragment>
+        }
+      />
+       <Route path='/contactUs' element={
+        <Fragment>
+          <Header />
+        <ContactUs/>
         </Fragment>
         }
       />

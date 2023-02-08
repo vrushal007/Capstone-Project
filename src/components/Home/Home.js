@@ -7,10 +7,12 @@ import aboutUs from '../../images/mainBody/about-us.jpg';
 import { Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import choose1 from '../../images/mainBody/choose-1.png';
 import choose2 from '../../images/mainBody/choose-2.png';
 import choose3 from '../../images/mainBody/choose-3.png';
 import { Link } from 'react-router-dom';
+import '../Header/Header.css'
 
 const Home = () => {
     return (
@@ -56,7 +58,7 @@ const Home = () => {
                         <Button>CARDIO TRAINING SESSION <FontAwesomeIcon style={{ marginLeft: "10px" }} icon={faArrowRight} /></Button>
                     </div>
                 </div>
-                <Link to='/program' style={{textDecoration:'none'}}><Button style={{ background: 'goldenrod',color:'black', marginTop:"25px",fontSize:"20px",  borderRadius:"0px",padding:'15px' }}>View More</Button></Link>
+                <Link to='/ourClasses' style={{textDecoration:'none'}}><Button style={{ background: 'goldenrod',color:'black', marginTop:"25px",fontSize:"20px",  borderRadius:"0px",padding:'15px' }}>View More</Button></Link>
             </section>
             <section className='chooseUs'>
                 <h2><span style={{ color: 'goldenrod' }}>WHY</span> CHOOSE US</h2>

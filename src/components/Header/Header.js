@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, IconButton, Menu, MenuItem } from '@material-ui/core';
-import { Link } from "react-router-dom";
+import { Link, useLocation,NavLink } from "react-router-dom";
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,8 +10,24 @@ const ITEM_HEIGHT = 48;
 
 const Header = () => {
     const [anchorEl, setAnchorEl] = useState(null);
-
+    const [isHomeSection, setIsHomeSection] = useState(false);
+    const [sectionText,setSectionText] = useState('')
+    const {pathname} = useLocation()
     const open = Boolean(anchorEl);
+
+    useEffect(()=>{
+        if(pathname==='/'){
+            setIsHomeSection(true)
+        }
+        if(pathname==='/program'){
+            setIsHomeSection(false)
+            setSectionText('Our Programs')
+        }
+        if(pathname==='/pricing'){
+            setIsHomeSection(false)
+            setSectionText('Pricing')
+        }
+    },[pathname])
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -26,13 +42,10 @@ const Header = () => {
             <nav className="navBar">
                 <h2>POWER <span style={{ color: "goldenrod" }}>X</span> </h2>
                 <section className='navOption'>
-                    <p><Link to='/' style={{ color: 'goldenrod' }}>Home</Link></p>
-                    <p><Link to='/services'>Services</Link></p>
-                    <p><Link to='/ourClasses'>Our Classes</Link></p>
-                    <p><Link to='/aboutUs'>About us</Link></p>
-                    <p><Link to='/blog'>Blog</Link></p>
-                    <p><Link to='/pricing'>Pricing</Link></p>
-                    <p><Link to='/contactUs'>Contact us</Link></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })} to='/'>Home</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/program'>Program</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/pricing'>Pricing</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/contactUs'>Contact us</NavLink></p>
                 </section>
                 <section>               
                     <IconButton
@@ -61,24 +74,9 @@ const Header = () => {
                                 Home
                             </MenuItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/services'>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/program'>
                             <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Services
-                            </MenuItem>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/ourClasses'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Our Classes
-                            </MenuItem>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/aboutUs'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                About us
-                            </MenuItem>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/blog'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Blog
+                                Our Programs
                             </MenuItem>
                         </Link>
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/pricing'>
@@ -94,16 +92,21 @@ const Header = () => {
                     </Menu>
                 </section>
             </nav>
-            <section className='headerBody'>
+            {isHomeSection && <section className='headerBody'>
                 <section>
                     <h1>THE BEST FITNESS <br /> STUDIO IN TOWN</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates excepturi ratione harum placeat sint, adipisci eaque tenetur fuga asperiores ea esse dicta, non sed ex quae quisquam laborum voluptatum, veritatis accusamus. Illo omnis harum corrupti?</p>
                     <Link style={{textDecoration: 'none'}} to='/pricing'><Button>JOIN US</Button></Link>
                 </section>
-                <section>
-                    <FontAwesomeIcon icon={faYoutube} />
+                <section >
+                    <FontAwesomeIcon icon={faYoutube} style={{opacity:0}}/>
                 </section>
-            </section>
+            </section>}
+            {!isHomeSection && <section>
+                <section className='otherSection'>
+                    <h1>{sectionText}</h1>
+                </section>
+            </section>}
         </header >
     );
 };

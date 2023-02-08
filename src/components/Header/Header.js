@@ -23,10 +23,6 @@ const Header = () => {
             setIsHomeSection(false)
             setSectionText('Our Classes')
         }
-        if(pathname==='/aboutUs'){
-            setIsHomeSection(false)
-            setSectionText('About Us')
-        }
         if(pathname==='/pricing'){
             setIsHomeSection(false)
             setSectionText('Pricing')
@@ -48,7 +44,6 @@ const Header = () => {
                 <section className='navOption'>
                     <p><Link to='/' style={{ color: 'goldenrod' }}>Home</Link></p>
                     <p><Link to='/ourClasses'>Our Classes</Link></p>
-                    <p><Link to='/aboutUs'>About us</Link></p>
                     <p><Link to='/pricing'>Pricing</Link></p>
                     <p><Link to='/contactUs'>Contact us</Link></p>
                 </section>
@@ -82,11 +77,6 @@ const Header = () => {
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/ourClasses'>
                             <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
                                 Our Classes
-                            </MenuItem>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/aboutUs'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                About us
                             </MenuItem>
                         </Link>
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/pricing'>

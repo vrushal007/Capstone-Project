@@ -11,12 +11,25 @@ const ITEM_HEIGHT = 48;
 const Header = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [isHomeSection, setIsHomeSection] = useState(false);
+    const [sectionText,setSectionText] = useState('')
     const {pathname} = useLocation()
     const open = Boolean(anchorEl);
 
     useEffect(()=>{
         if(pathname==='/'){
             setIsHomeSection(true)
+        }
+        if(pathname==='/ourClasses'){
+            setIsHomeSection(false)
+            setSectionText('Our Classes')
+        }
+        if(pathname==='/aboutUs'){
+            setIsHomeSection(false)
+            setSectionText('About Us')
+        }
+        if(pathname==='/pricing'){
+            setIsHomeSection(false)
+            setSectionText('Pricing')
         }
     },[pathname])
 
@@ -34,10 +47,8 @@ const Header = () => {
                 <h2>POWER <span style={{ color: "goldenrod" }}>X</span> </h2>
                 <section className='navOption'>
                     <p><Link to='/' style={{ color: 'goldenrod' }}>Home</Link></p>
-                    <p><Link to='/services'>Services</Link></p>
                     <p><Link to='/ourClasses'>Our Classes</Link></p>
                     <p><Link to='/aboutUs'>About us</Link></p>
-                    <p><Link to='/blog'>Blog</Link></p>
                     <p><Link to='/pricing'>Pricing</Link></p>
                     <p><Link to='/contactUs'>Contact us</Link></p>
                 </section>
@@ -68,11 +79,6 @@ const Header = () => {
                                 Home
                             </MenuItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/services'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Services
-                            </MenuItem>
-                        </Link>
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/ourClasses'>
                             <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
                                 Our Classes
@@ -81,11 +87,6 @@ const Header = () => {
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/aboutUs'>
                             <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
                                 About us
-                            </MenuItem>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/blog'>
-                            <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Blog
                             </MenuItem>
                         </Link>
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/pricing'>
@@ -106,6 +107,14 @@ const Header = () => {
                     <h1>THE BEST FITNESS <br /> STUDIO IN TOWN</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates excepturi ratione harum placeat sint, adipisci eaque tenetur fuga asperiores ea esse dicta, non sed ex quae quisquam laborum voluptatum, veritatis accusamus. Illo omnis harum corrupti?</p>
                     <Link style={{textDecoration: 'none'}} to='/pricing'><Button>JOIN US</Button></Link>
+                </section>
+                <section >
+                    <FontAwesomeIcon icon={faYoutube} style={{opacity:0}}/>
+                </section>
+            </section>}
+            {!isHomeSection && <section>
+                <section className='otherSection'>
+                    <h1>{sectionText}</h1>
                 </section>
             </section>}
         </header >

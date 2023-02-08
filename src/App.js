@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import OurClasses from './components/OurClasses/OurClasses'
 import Pricing from './components/Pricing/Pricing'
+import Footer from './components/Footer/Footer'
 function App() {
   return (
     <div>
@@ -29,7 +30,15 @@ function App() {
         </Fragment>
         }
       />
+       {/* <Route path='/footer' element={
+        <Fragment>
+          <Header />
+          <Footer/>
+        </Fragment>
+        }
+      /> */}
       </Routes>
+      <Footer/>
     </div>
       
   )

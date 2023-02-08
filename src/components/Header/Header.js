@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, IconButton, Menu, MenuItem } from '@material-ui/core';
+import { Button, IconButton, Menu, MenuItem } from '@mui/material';
 import { Link, useLocation,NavLink } from "react-router-dom";
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
@@ -100,7 +100,7 @@ const Header = () => {
                 <section>
                     <h1>THE BEST FITNESS <br /> STUDIO IN TOWN</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates excepturi ratione harum placeat sint, adipisci eaque tenetur fuga asperiores ea esse dicta, non sed ex quae quisquam laborum voluptatum, veritatis accusamus. Illo omnis harum corrupti?</p>
-                    <Link style={{textDecoration: 'none'}} to='/pricing'><Button>JOIN US</Button></Link>
+                    <Link style={{textDecoration: 'none'}} to='/pricing'><Button style={{color: 'black'}}>JOIN US</Button></Link>
                 </section>
                 <section >
                     <FontAwesomeIcon icon={faYoutube} style={{opacity:0}}/>

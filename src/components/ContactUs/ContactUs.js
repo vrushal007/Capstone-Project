@@ -1,4 +1,4 @@
-import { TextField, Grid, Button } from '@material-ui/core'
+import { TextField, Grid, Button } from '@mui/material'
 import React from 'react'
 import './ContactUs.css'
 
@@ -23,7 +23,7 @@ function ContactUs() {
                 <Grid item xs={12}>
                   <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                 </Grid>
-                  <Button type="submit" variant="contained" style={{background:'goldenrod', borderRadius:0, padding:'10px 20px'}}>Submit</Button>
+                <Button type="submit" variant="contained" style={{background:'goldenrod', borderRadius:0, padding:'10px 20px', margin:'20px'}}>Submit</Button>
               </Grid>
             </form>
         </div>

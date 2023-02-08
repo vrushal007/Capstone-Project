@@ -1,6 +1,6 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Pricing.css";
@@ -72,7 +72,7 @@ console.log(location);
                 </p>
               </div>
               <Link style={{ textDecoration: "none" }}to="/pricing">
-                <Button>PURCHASE</Button>
+                <Button style={{color: 'black'}}>PURCHASE</Button>
               </Link>
             </div>
             <div>
@@ -117,7 +117,7 @@ console.log(location);
                 </p>
               </div>
               <Link style={{ textDecoration: "none" } }to='/pricing'>
-                <Button>PURCHASE</Button>
+                <Button style={{color: 'black'}}>PURCHASE</Button>
               </Link>
             </div>
             <div>
@@ -163,7 +163,7 @@ console.log(location);
                 </p>
               </div>
               <Link style={{ textDecoration: "none" }}to='/pricing'>
-                <Button>PURCHASE</Button>
+                <Button style={{color: 'black'}}>PURCHASE</Button>
               </Link>
             </div>
           </div>

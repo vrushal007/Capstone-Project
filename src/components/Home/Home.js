@@ -4,10 +4,9 @@ import group1 from '../../images/mainBody/Group-1.png';
 import group2 from '../../images/mainBody/Group-2.png';
 import group3 from '../../images/mainBody/Group-3.png';
 import aboutUs from '../../images/mainBody/about-us.jpg';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import choose1 from '../../images/mainBody/choose-1.png';
 import choose2 from '../../images/mainBody/choose-2.png';
 import choose3 from '../../images/mainBody/choose-3.png';
@@ -52,13 +51,13 @@ const Home = () => {
                 <h2>TRAINING <span style={{ color: 'goldenrod' }}>PROGRAMS</span></h2>
                 <div className='programsOption'>
                     <div>
-                        <Button>YOGA TRAINING SESSION <FontAwesomeIcon style={{ marginLeft: "10px" }} icon={faArrowRight} /></Button>
+                        <Button style={{color: 'black'}}>YOGA TRAINING SESSION <FontAwesomeIcon style={{ marginLeft: "10px" }} icon={faArrowRight} /></Button>
                     </div>
                     <div>
-                        <Button>CARDIO TRAINING SESSION <FontAwesomeIcon style={{ marginLeft: "10px" }} icon={faArrowRight} /></Button>
+                        <Button style={{color: 'black'}}>CARDIO TRAINING SESSION <FontAwesomeIcon style={{ marginLeft: "10px" }} icon={faArrowRight} /></Button>
                     </div>
                 </div>
-                <Link to='/ourClasses' style={{textDecoration:'none'}}><Button style={{ background: 'goldenrod',color:'black', marginTop:"25px",fontSize:"20px",  borderRadius:"0px",padding:'15px' }}>View More</Button></Link>
+                <Link to='/program' style={{textDecoration:'none'}}><Button style={{ background: 'goldenrod',color:'black', marginTop:"25px",fontSize:"20px",  borderRadius:"0px",padding:'15px' }}>View More</Button></Link>
             </section>
             <section className='chooseUs'>
                 <h2><span style={{ color: 'goldenrod' }}>WHY</span> CHOOSE US</h2>

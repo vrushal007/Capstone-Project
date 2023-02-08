@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.462a148f.css",
-    "main.js": "/static/js/main.5dee90cf.js",
-    "static/media/program-2.jpg": "/static/media/program-2.b4345215d46d98a12a4f.jpg",
-    "static/media/header_background.jpg": "/static/media/header_background.dfcf46491402ce38017c.jpg",
-    "static/media/about-us.jpg": "/static/media/about-us.2c613efbf8537b0b8aec.jpg",
-    "static/media/option-3.jpg": "/static/media/option-3.f2126515aceb49d029e5.jpg",
-    "static/media/option-2.jpg": "/static/media/option-2.ef9e460530471010c530.jpg",
-    "static/media/option-1.jpg": "/static/media/option-1.6acc5e09630d08cc3e2d.jpg",
-    "static/media/program-1.png": "/static/media/program-1.f9f9bf934d27262df4c9.png",
-    "static/media/class-4.jpg": "/static/media/class-4.384563085c4028b1221e.jpg",
-    "static/media/class-2.jpg": "/static/media/class-2.b071163ec5b7eb9fee80.jpg",
-    "static/media/class-3.jpg": "/static/media/class-3.f18220caeaab358ff045.jpg",
-    "static/media/class-1.jpg": "/static/media/class-1.b45a7229a462477e9a82.jpg",
-    "static/media/class-6.jpg": "/static/media/class-6.3484b82fa77506d505c2.jpg",
-    "static/media/class-5.jpg": "/static/media/class-5.d0d88389b96ce2136e40.jpg",
-    "index.html": "/index.html",
-    "main.462a148f.css.map": "/static/css/main.462a148f.css.map",
-    "main.5dee90cf.js.map": "/static/js/main.5dee90cf.js.map"
+    "main.css": "/Capstone-Project/static/css/main.47e70274.css",
+    "main.js": "/Capstone-Project/static/js/main.88e72f67.js",
+    "static/media/program-2.jpg": "/Capstone-Project/static/media/program-2.b4345215d46d98a12a4f.jpg",
+    "static/media/header_background.jpg": "/Capstone-Project/static/media/header_background.dfcf46491402ce38017c.jpg",
+    "static/media/about-us.jpg": "/Capstone-Project/static/media/about-us.2c613efbf8537b0b8aec.jpg",
+    "static/media/option-3.jpg": "/Capstone-Project/static/media/option-3.f2126515aceb49d029e5.jpg",
+    "static/media/option-2.jpg": "/Capstone-Project/static/media/option-2.ef9e460530471010c530.jpg",
+    "static/media/option-1.jpg": "/Capstone-Project/static/media/option-1.6acc5e09630d08cc3e2d.jpg",
+    "static/media/program-1.png": "/Capstone-Project/static/media/program-1.f9f9bf934d27262df4c9.png",
+    "static/media/class-4.jpg": "/Capstone-Project/static/media/class-4.384563085c4028b1221e.jpg",
+    "static/media/class-2.jpg": "/Capstone-Project/static/media/class-2.b071163ec5b7eb9fee80.jpg",
+    "static/media/class-3.jpg": "/Capstone-Project/static/media/class-3.f18220caeaab358ff045.jpg",
+    "static/media/class-1.jpg": "/Capstone-Project/static/media/class-1.b45a7229a462477e9a82.jpg",
+    "static/media/class-6.jpg": "/Capstone-Project/static/media/class-6.3484b82fa77506d505c2.jpg",
+    "static/media/class-5.jpg": "/Capstone-Project/static/media/class-5.d0d88389b96ce2136e40.jpg",
+    "index.html": "/Capstone-Project/index.html",
+    "main.47e70274.css.map": "/Capstone-Project/static/css/main.47e70274.css.map",
+    "main.88e72f67.js.map": "/Capstone-Project/static/js/main.88e72f67.js.map"
   },
   "entrypoints": [
-    "static/css/main.462a148f.css",
-    "static/js/main.5dee90cf.js"
+    "static/css/main.47e70274.css",
+    "static/js/main.88e72f67.js"
   ]
 }

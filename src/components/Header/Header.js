@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, IconButton, Menu, MenuItem } from '@material-ui/core';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,NavLink } from "react-router-dom";
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,9 +19,9 @@ const Header = () => {
         if(pathname==='/'){
             setIsHomeSection(true)
         }
-        if(pathname==='/ourClasses'){
+        if(pathname==='/program'){
             setIsHomeSection(false)
-            setSectionText('Our Classes')
+            setSectionText('Our Programs')
         }
         if(pathname==='/pricing'){
             setIsHomeSection(false)
@@ -42,10 +42,10 @@ const Header = () => {
             <nav className="navBar">
                 <h2>POWER <span style={{ color: "goldenrod" }}>X</span> </h2>
                 <section className='navOption'>
-                    <p><Link to='/' style={{ color: 'goldenrod' }}>Home</Link></p>
-                    <p><Link to='/ourClasses'>Our Classes</Link></p>
-                    <p><Link to='/pricing'>Pricing</Link></p>
-                    <p><Link to='/contactUs'>Contact us</Link></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })} to='/'>Home</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/program'>Program</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/pricing'>Pricing</NavLink></p>
+                    <p><NavLink style={({ isActive }) => ({ color: isActive ? 'goldenrod' : 'white' })}  to='/contactUs'>Contact us</NavLink></p>
                 </section>
                 <section>
                     <IconButton
@@ -74,9 +74,9 @@ const Header = () => {
                                 Home
                             </MenuItem>
                         </Link>
-                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/ourClasses'>
+                        <Link style={{ textDecoration: 'none', color: 'black' }} to='/program'>
                             <MenuItem style={{ fontWeight: '600' }} onClick={handleClose}>
-                                Our Classes
+                                Our Programs
                             </MenuItem>
                         </Link>
                         <Link style={{ textDecoration: 'none', color: 'black' }} to='/pricing'>

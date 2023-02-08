@@ -22,7 +22,7 @@ function App() {
         </Fragment>
         }
       />
-      <Route path='/ourClasses' element={
+      <Route path='/program' element={
         <Fragment>
           <Header />
           <OurClasses/>

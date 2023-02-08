@@ -2,7 +2,7 @@
     "name": "capstone-project",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://vrushal007.github.io/Capstone-Project/",
+    "homepage": "",
     "dependencies": {
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
@@ -25,7 +25,7 @@
     },
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "deploy": "gh-pages -b master",
         "start": "react-scripts --openssl-legacy-provider start",
         "build": "react-scripts build",
         "test": "react-scripts test",

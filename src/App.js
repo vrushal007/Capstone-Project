@@ -9,31 +9,28 @@ import ContactUs from './components/ContactUs/ContactUs'
 function App() {
   return (
     <div>
+      <Header />
       <Routes>
       <Route path='/' element={
         <Fragment>
-          <Header />
           <Home />
         </Fragment>
         }
       />
       <Route path='/pricing' element={
         <Fragment>
-          <Header />
           <Pricing/>
         </Fragment>
         }
       />
       <Route path='/program' element={
         <Fragment>
-          <Header />
           <OurClasses/>
         </Fragment>
         }
       />
        <Route path='/contactUs' element={
         <Fragment>
-          <Header />
         <ContactUs/>
         </Fragment>
         }

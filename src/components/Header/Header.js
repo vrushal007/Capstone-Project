@@ -27,6 +27,10 @@ const Header = () => {
             setIsHomeSection(false)
             setSectionText('Pricing')
         }
+        if(pathname==='/contactUs'){
+            setIsHomeSection(false)
+            setSectionText('Contact Us')
+        }
     },[pathname])
 
     const handleClick = (event) => {

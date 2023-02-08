@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .footer>section:first-child>* {
